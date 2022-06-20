@@ -154,10 +154,9 @@ func (c *Client) ListFile() ([]string, error) {
 			break
 		}
 		if err != nil {
-			return result ,fmt.Errorf("Bucket(%q).Objects: %v", c.bucketName, err)
+			return result, fmt.Errorf("Bucket(%q).Objects: %v", c.bucketName, err)
 		}
 		result = append(result, attrs.Name)
 	}
-	return result ,nil
+	return result, nil
 }
-

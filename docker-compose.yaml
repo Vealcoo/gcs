@@ -1,0 +1,11 @@
+version: '3'
+services:
+  server:
+    image: golang:1.14.6-alpine
+    volumes:
+      - ${PWD}:/app
+      - ~/.config/:/root/.config
+    working_dir: /app
+    ports:
+      - "8887:8887"
+    entrypoint: go run app/main.go
